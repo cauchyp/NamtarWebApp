@@ -1,0 +1,23 @@
+{
+  "name": "gitproject",
+  "version": "1.0.0",
+  "description": "Squelette pour furture JdR en WebApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cauchyp/NamtarWebApp.git"
+  },
+  "author": "Cauchyzor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cauchyp/NamtarWebApp/issues"
+  },
+  "homepage": "https://github.com/cauchyp/NamtarWebApp#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
