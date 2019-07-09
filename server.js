@@ -24,6 +24,6 @@ app.get('/', function (request, response) {
 
 
 
-
 app.listen(80);
+console.log("application accessible ici : http://localhost:80/");
 console.log('Script Entièrement Chargé');

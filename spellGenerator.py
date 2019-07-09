@@ -26,7 +26,7 @@ def select_all_marks(conn):
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM Marque")
+    cur.execute("SELECT * FROM marque")
  
     rows = cur.fetchall()
 
@@ -43,7 +43,8 @@ def select_marks_by_index(conn, index):
     """
     cur = conn.cursor()
     #TODO Corriger la Query ; selectionner une ligne avec l'index 
-    cur.execute("SELECT * FROM Marque WHERE Index=?", (index,))
+
+    cur.execute("SELECT * FROM marque WHERE id=?",5)
  
     rows = cur.fetchall()
  
