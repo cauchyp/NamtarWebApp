@@ -26,7 +26,7 @@ def select_all_marks(conn):
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM marque")
+    cur.execute("SELECT * FROM marque;")
  
     rows = cur.fetchall()
 
@@ -34,17 +34,18 @@ def select_all_marks(conn):
         print(row)
  
  
-def select_marks_by_index(conn, index):
+def select_marks_by_id(conn, id):
     """
-    Query tasks by index
+    Query tasks by id
     :param conn: the Connection object
-    :param index:
+    :param id:
     :return:
     """
     cur = conn.cursor()
-    #TODO Corriger la Query ; selectionner une ligne avec l'index 
+    #TODO Corriger la Query ; selectionner une ligne avec l'id 
 
-    cur.execute("SELECT * FROM marque WHERE id=?",5)
+    id=(id,)
+    cur.execute("SELECT * FROM marque WHERE id=?;",id)
  
     rows = cur.fetchall()
  
@@ -64,7 +65,7 @@ def main():
         select_all_marks(conn)
 
         print("2. Query only 1 task")
-        select_marks_by_index(conn,5)
+        select_marks_by_id(conn,5)
  
  
 if __name__ == '__main__':
