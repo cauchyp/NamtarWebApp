@@ -1,85 +1,165 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<!--HEADER-->
 
 <head>
-  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>NamtarWebApp Projet: Responsive CSS Boilerplate for ME</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="google" value="notranslate">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-  <title>My App</title>
+  <!-- Skeleton CSS Refs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="\css\style.css" rel='stylesheet' type='text/css'>
+  <link href="\skeleton-css\css\normalize.css" rel='stylesheet' type='text/css'>
+  <link href="\skeleton-css\css\skeleton.css" rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">My App</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Password" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Hello, world!</h1>
-      <p>
-        This is a template for a simple marketing or informational website. It includes a large callout
-        called a jumbotron and three supporting pieces of content. Use it as a starting point to create
-        something more unique.
-        <%= paramettreTransmit%>
-      </p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-    </div>
-  </div>
-
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <h2>Section 1</h2>
-        <p>Some information for section 1</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Section 2</h2>
-        <p>Some information for section 2 </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Section 3</h2>
-        <p>Some information for section 1</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <div class="twelve columns">
+        <h1 class="title"> Roleplay App </h1>
       </div>
     </div>
 
-    <hr>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#codeNavPopover">Character Managment</a>
+            <div id="codeNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="#grid">Grid</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#typography">Typography</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#buttons">Buttons</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#forms">Forms</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#lists">Lists</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#code">Code</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#tables">Tables</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#queries">Queries</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#utilities">Utilities</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item"><a class="navbar-link" href="#examples">Spell Generator</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <footer>
-      <p>&copy; My App 2015</p>
-    </footer>
-  </div> <!-- /container -->
+    <section class="services">
+      <div class="row">
+        <div class="twelve columns">
+          <h3>Tools Available</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <h4>Create a Character</h4>
+          <span class="fa fa-picture-o"></span>
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </div>
+        <div class="one-half column">
+          <h4>Generate a Spell</h4>
+          <span class="fa fa-leaf"></span>
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </div>
+      </div>
+      <!--end of .row-->
+    </section>
+  </div>
+  <!--end of .container-->
 
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!--ABOUT-->
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h3>Who am I</h3>
+        </div>
+      </div>
+      <!--end of .row-->
+      <div class="row bottom">
+        <div class="two-thirds column">
+          <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+            sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+          </p>
+          <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis
+            ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+            Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+          <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+            Aenean vulputate eleifend tellus.</p>
+          <%= paramettreTransmit%>
+        </div>
+        <div class="one-third column">
+          <h4>Degrees</h4>
+          <ul>
+            <li>BA in Information Systems</li>
+            <li>MSc in Applied Mathematics </li>
+            <li>Phd in Artificial Intelligence</li>
+          </ul>
+          <h4>Honors</h4>
+          <ul>
+            <li>1st place in the contest "MyContest"</li>
+            <li>Best Paper for 2014</li>
+          </ul>
+          <a href="#" class="btn">CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
 </body>
-</html>
