@@ -5,11 +5,11 @@ const sqlite3 = require('sqlite3').verbose();
 
 app.use(express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/public'));
-// app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/view'));
 
 app.get('/', function (request, response) {
     console.log(request.url);
-    response.render('intro.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+    response.render('intro.ejs');
 
 });
 
