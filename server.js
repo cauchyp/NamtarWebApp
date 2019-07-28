@@ -1,5 +1,5 @@
-let express= require('express');
-let app = express();
+var express= require('express');
+var app = express();
 const sqlite3 = require('sqlite3').verbose();
 
 
@@ -9,13 +9,19 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (request, response) {
     console.log(request.url);
-    response.render('index.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+    response.render('intro.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+
+});
+
+app.get('/histoire', function (request, response) {
+    console.log(request.url);
+    response.render('histoire.ejs', { paramettreTransmit: 'Je suis un Licornet' });
 
 });
 
 app.get('/testDataBase', function(request, response){
     // open database in memorys
-    let db = new sqlite3.Database(':memory:', (err) => {
+    var db = new sqlite3.Database(':memory:', (err) => {
         if (err) {
             return console.error(err.message);
         }
