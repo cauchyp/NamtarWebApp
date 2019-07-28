@@ -19,6 +19,13 @@ app.get('/histoire', function (request, response) {
 
 });
 
+app.get('/regles', function (request, response) {
+    console.log(request.url);
+    response.render('regles.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+
+});
+
+
 app.get('/testDataBase', function(request, response){
     // open database in memorys
     var db = new sqlite3.Database(':memory:', (err) => {
