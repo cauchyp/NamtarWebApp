@@ -21,13 +21,13 @@ app.get('/histoire', function (request, response) {
 
 app.get('/reglesChap1', function (request, response) {
     console.log(request.url);
-    response.render('reglesChap1.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+    response.render('regles.ejs', { paramettreTransmit: 'Je suis un Licornet' });
 
 });
 
 app.get('/reglesChap2', function (request, response) {
     console.log(request.url);
-    response.render('reglesChap1.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+    response.render('reglesChap2.ejs', { paramettreTransmit: 'Je suis un Licornet' });
 
 });
 
