@@ -47,7 +47,7 @@ app.get('/testDataBase', function(request, response){
         }
         console.log('Close the database connection.');
     });
-})
+});
 
 app.listen(80);
 console.log("application accessible ici : http://localhost:80/");
