@@ -1,0 +1,27 @@
+<!--HEAD -->
+<%- include('header'); -%>
+
+<!-- BODY -->
+
+<body class="code-snippets-visible">
+
+  <h1>Générateur de Compétences</h1>
+
+    <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Effets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% effets.forEach(function(element) { %>
+            <tr>
+              <td><%= element.nom %></td>
+              <td><%= element.description %></td>
+              <td><%= element.effets %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+</body>

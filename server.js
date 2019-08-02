@@ -1,4 +1,4 @@
-var express= require('express');
+var express = require('express');
 var app = express();
 const sqlite3 = require('sqlite3').verbose();
 
@@ -31,7 +31,32 @@ app.get('/reglesChap2', function (request, response) {
 
 });
 
-app.get('/testDataBase', function(request, response){
+app.get('/generateur', function (request, response) {
+    console.log(request.url);
+    var effetsExtrait;
+    var db = new sqlite3.Database('spellGenerator.db', (err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        console.log('Connected to the in-memory SQlite database.');
+    });
+
+    db.all("SELECT * FROM marque", function(err, rows) {
+        console.log(rows);
+        response.render('generateur.ejs', { effets : rows});
+	});	
+
+    // close the database connection
+    db.close((err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        console.log('Close the database connection.');
+    });
+});
+
+
+app.get('/testDataBase', function (request, response) {
     // open database in memorys
     var db = new sqlite3.Database(':memory:', (err) => {
         if (err) {
