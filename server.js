@@ -31,6 +31,10 @@ app.get('/reglesChap2', function (request, response) {
 
 });
 
+app.get('/fichePerso',function (request, response){
+    console.log(request.url);
+    response.render('fichePerso.ejs');
+});
 app.get('/generateur', function (request, response) {
     console.log(request.url);
     var effetsExtrait;
