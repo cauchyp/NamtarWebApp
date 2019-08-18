@@ -125,101 +125,17 @@
         <tr>
           <th>Aptitude </th>
           <th>Caractéristique Associé</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
+        <% aptitudeList.forEach(function(element) { %>
         <tr>
-          <td>Athlétisme</td>
-          <td>Vigueur</td>
+          <td><%= element.nom %></td>
+          <td><%= element.caracteristique %></td>
+          <td><%= element.description %></td>
         </tr>
-        <tr>
-          <td>Artillerie</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Pugilat</td>
-          <td>Vigueur</td>
-        </tr>
-        <tr>
-          <td>Distance</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Corps à corps</td>
-          <td>Vigueur</td>
-        </tr>
-        <tr>
-          <td>Commandement</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Charme</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Pilotage</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Survie</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Mécaniques</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Médecine</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Informatique</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Négociation</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Calme</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Tromperie</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Coercition</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Magouille</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Perception</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Vigilance</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Discrétion</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Coercition</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Magouille</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Maîtrise du Fluide</td>
-          <td>Volonté</td>
-        </tr>
+        <% }); %>
       </tbody>
     </table>
   </div>
