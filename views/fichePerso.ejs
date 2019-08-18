@@ -54,40 +54,72 @@
   </div>
   <div class="docs-section">
     <div class="row">
-      <div class="six columns">
+      <div class="four columns">
         <table class="u-full-width">
           <thead>
             <tr>
               <th>Nom</th>
+              <th>Caracteristique</th>
               <th>Rang</th>
             </tr>
           </thead>
           <tbody>
             <% 
-            aptitudeList.forEach(function(element) { %>
+            aptitudeList.forEach(function(element) {
+              if(element.categorie=='combat') {%>
             <tr>
               <td><%= element.nom %></td>
               <td><%= element.caracteristique %></td>
-              <td><%= element.description %></td>
+              <td>0</td>
             </tr>
-            <% }); %>
+            <% }
+          }); %>
           </tbody>
         </table>
       </div>
-      <div class="six columns">
+      <div class="four columns">
         <table class="u-full-width">
           <thead>
             <tr>
               <th>Nom</th>
+              <th>Caracteristique</th>
               <th>Rang</th>
             </tr>
           </thead>
           <tbody>
+            <% aptitudeList.forEach(function(element) {
+                if(element.categorie=='utilitaire') {%>
             <tr>
-              <th></th>
-              <th></th>
+              <td><%= element.nom %></td>
+              <td><%= element.caracteristique %></td>
+              <td>0</td>
             </tr>
+            <% }
+            }); %>
           </tbody>
+        </table>
+      </div>
+      <div class="four columns">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Caracteristique</th>
+              <th>Rang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% aptitudeList.forEach(function(element) {
+                if(element.categorie=='sociale') {%>
+            <tr>
+              <td><%= element.nom %></td>
+              <td><%= element.caracteristique %></td>
+              <td>0</td>
+            </tr>
+            <% }
+            }); %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
