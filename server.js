@@ -64,6 +64,11 @@ app.get('/reglesChap5', function (request, response) {
     response.render('reglesChap5.ejs', { paramettreTransmit: 'Je suis un Licornet' });
 });
 
+app.get('/reglesChap6', function (request, response) {
+    console.log(request.url);
+    response.render('reglesChap6.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+});
+
 app.get('/fichePerso', function (request, response) {
     console.log(request.url);
     var db = new sqlite3.Database('spellGenerator.db', (err) => {
