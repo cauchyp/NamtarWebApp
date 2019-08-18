@@ -47,6 +47,12 @@ app.get('/reglesChap2', function (request, response) {
 
 });
 
+app.get('/reglesChap3', function (request, response) {
+    console.log(request.url);
+    response.render('reglesChap3.ejs', { paramettreTransmit: 'Je suis un Licornet' });
+
+});
+
 app.get('/fichePerso', function (request, response) {
     console.log(request.url);
     var db = new sqlite3.Database('spellGenerator.db', (err) => {
