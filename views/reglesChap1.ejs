@@ -17,13 +17,13 @@
     <p> Pour commencer, nous allons définir plusieurs indicateurs qui vont vous suivre tout le long de votre périple.
     </p>
     <div class="row">
-      <div class="six columns">
+      <div class="four columns">
         <h5>La jauge de Santé (PV)</h5>
         <p> Celle-ci représente votre santé. Si elle tombe à 0, c'est que vous n'êtes plus capable de faire quoi que ce
           soit. Si elle continue à descendre en dessous, votre pronostique vital est engagé. </p>
         <p>Son score de départ est égal à 10 + <strong>Vigueur</strong></p>
       </div>
-      <div class="six columns">
+      <div class="four columns">
         <h5>La jauge d'énergie (PE)</h5>
         <p>Celle-ci représente votre fatigue physique et mentale. Elle est aussi liée à la <strong>Résonnance</strong>.
           Si
@@ -35,21 +35,13 @@
           je l'espère pour vous).</p>
         <p>Son score de départ est égal à 10 + <strong>Volontée</strong></p>
       </div>
-    </div>
-    <div class="row">
-      <div class="six columns">
+      <div class="four columns">
         <h5>L'Encaissement</h5>
         <p>C'est votre résistance physique. Chaque fois qu'on tentera de déstabiliser votre intégrité physique, vous
           devrez
           soustraire sa valeur des dégâts reçus.
         </p>
         <p>Son score de départ est égal à la <strong>Vigueur</strong></p>
-      </div>
-      <div class="six columns">
-        <h5>La Défense</h5>
-        <p>C'est votre capacité a ésquiver ou parer les attaques ou les <strong>Competences</strong>. Chaque point
-          présent
-          dans la <strong>Défense</strong> ajoute un dés d'infortune aux jet de l'adversaire.</p>
       </div>
     </div>
   </div>
@@ -145,101 +137,17 @@
         <tr>
           <th>Aptitude </th>
           <th>Caractéristique Associé</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
+        <% aptitudeList.forEach(function(element) { %>
         <tr>
-          <td>Athlétisme</td>
-          <td>Vigueur</td>
+          <td><%= element.nom %></td>
+          <td><%= element.caracteristique %></td>
+          <td><%= element.description %></td>
         </tr>
-        <tr>
-          <td>Artillerie</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Pugilat</td>
-          <td>Vigueur</td>
-        </tr>
-        <tr>
-          <td>Distance</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Corps à corps</td>
-          <td>Vigueur</td>
-        </tr>
-        <tr>
-          <td>Commandement</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Charme</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Pilotage</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Survie</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Mécaniques</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Médecine</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Informatique</td>
-          <td>Intelligence</td>
-        </tr>
-        <tr>
-          <td>Négociation</td>
-          <td>Présence</td>
-        </tr>
-        <tr>
-          <td>Calme</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Tromperie</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Coercition</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Magouille</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Perception</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Vigilance</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Discrétion</td>
-          <td>Agilité</td>
-        </tr>
-        <tr>
-          <td>Coercition</td>
-          <td>Volonté</td>
-        </tr>
-        <tr>
-          <td>Magouille</td>
-          <td>Ruse</td>
-        </tr>
-        <tr>
-          <td>Maîtrise du Fluide</td>
-          <td>Volonté</td>
-        </tr>
+        <% }); %>
       </tbody>
     </table>
   </div>

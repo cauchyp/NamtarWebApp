@@ -1,0 +1,126 @@
+<!--HEAD -->
+<%- include('header'); -%>
+
+<!-- BODY -->
+
+<body class="code-snippets-visible">
+
+  <h3>Monsieur Lambda</h3>
+
+  <h5>Informations Générales</h5>
+  <div class="docs-section">
+    <div class="row">
+      <div class="two columns"><strong>Nom</strong></div>
+      <div class="four columns">Monsieur Lambda</div>
+      <div class="two columns"><strong>Nom (Joueur)</strong></div>
+      <div class="four columns">Jean Michel</div>
+    </div>
+    <div class="row">
+      <div class="two columns"><strong>Espèce</strong></div>
+      <div class="four columns">Humain</div>
+      <div class="two columns"><strong>Age</strong></div>
+      <div class="four columns">30</div>
+    </div>
+  </div>
+  <div class="docs-section">
+    <div class="row">
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+      <div class="two columns">
+        <h4>2</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="two columns"><strong>Vigueur</strong></div>
+      <div class="two columns"><strong>Agilité</strong></div>
+      <div class="two columns"><strong>Intelligence</strong></div>
+      <div class="two columns"><strong>Ruse</strong></div>
+      <div class="two columns"><strong>Volonté</strong></div>
+      <div class="two columns"><strong>Présence</strong></div>
+    </div>
+  </div>
+  <div class="docs-section">
+    <div class="row">
+      <div class="four columns">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Carac.</th>
+              <th>Rang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 
+            aptitudeList.forEach(function(element) {
+              if(element.categorie=='combat') {%>
+            <tr>
+              <td><%= element.nom %></td>
+              <td><%= element.caracteristique %></td>
+              <td>0</td>
+            </tr>
+            <% }
+          }); %>
+          </tbody>
+        </table>
+      </div>
+      <div class="four columns">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Carac.</th>
+              <th>Rang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% aptitudeList.forEach(function(element) {
+                if(element.categorie=='utilitaire') {%>
+            <tr>
+              <td><%= element.nom %></td>
+              <td><%= element.caracteristique %></td>
+              <td>0</td>
+            </tr>
+            <% }
+            }); %>
+          </tbody>
+        </table>
+      </div>
+      <div class="four columns">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Carac.</th>
+              <th>Rang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% aptitudeList.forEach(function(element) {
+                if(element.categorie=='sociale') {%>
+            <tr>
+              <td><%= element.nom %></td>
+              <td><%= element.caracteristique %></td>
+              <td>0</td>
+            </tr>
+            <% }
+            }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
