@@ -1,0 +1,29 @@
+<!--HEAD -->
+<%- include('header'); -%>
+
+<!-- BODY -->
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+<body class="code-snippets-visible">
+
+  <h3>Générateur de Compétences</h3>
+
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Effets</th>
+        <th>Coût</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% effets.forEach(function(element) { %>
+      <tr>
+        <td><%= element.nom %></td>
+        <td><%= element.effets %></td>
+        <td><%= element.cout %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+
+</body>

@@ -14,6 +14,7 @@ var reglesChap4Router = require('./routes/reglesChap4');
 var reglesChap5Router = require('./routes/reglesChap5');
 var reglesChap6Router = require('./routes/reglesChap6');
 var histoireRouter = require('./routes/histoire');
+var effetsRouter = require('./routes/effets');
 var generateurRouter = require('./routes/generateur');
 var fichePersoRouter = require('./routes/fichePerso');
 
@@ -40,6 +41,7 @@ app.use('/reglesChap5', reglesChap5Router);
 app.use('/reglesChap6', reglesChap6Router);
 app.use('/histoire', histoireRouter);
 app.use('/generateur', generateurRouter);
+app.use('/effets', effetsRouter);
 app.use('/fichePerso', fichePersoRouter);
 
 // catch 404 and forward to error handler
