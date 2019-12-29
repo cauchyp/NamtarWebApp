@@ -2,26 +2,14 @@
 <%- include('header'); -%>
 
 <!-- BODY -->
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 
-<body class="code-snippets-visible">
-
-  <h3>Générateur de Compétences</h3>
-
-    <table class="u-full-width">
-        <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Effets</th>
-            <th>Coût</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% effets.forEach(function(element) { %>
-            <tr>
-              <td><%= element.nom %></td>
-              <td><%= element.effets %></td>
-              <td><%= element.cout %></td>
-            </tr>
-          <% }); %>
-        </tbody>
+<body>
+    <h3>Générateur de Competences</h3>
+    <p>Nom : </p><br>
+    <p><%=skill%> </p>
+    <form method="POST" id="generateRandomSpell">
+        <!--input type="text" placeholder="Set quote of the day" name="skill" /-->
+        <input type="submit" value="Generate">
+    </form>
 </body>
