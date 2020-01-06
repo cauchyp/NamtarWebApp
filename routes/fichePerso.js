@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     console.log('Connected to the in-memory SQlite database.');
   });
 
-  db.all("SELECT * FROM aptitude", function (err, rows) {
+  db.all("SELECT * FROM APTITUDES", function (err, rows) {
     res.render('fichePerso.ejs', { aptitudeList: rows });
   });
 
