@@ -13,15 +13,15 @@
       <tr>
         <th>Nom</th>
         <th>Effets</th>
-        <th>Coût</th>
+        <th>Coût en Energie</th>
       </tr>
     </thead>
     <tbody>
       <% effets.forEach(function(element) { %>
       <tr>
-        <td><%= element.nom %></td>
-        <td><%= element.effets %></td>
-        <td><%= element.cout %></td>
+        <td><%= element.name %></td>
+        <td><%= element.description %></td>
+        <td><%= element.cost %></td>
       </tr>
       <% }); %>
     </tbody>

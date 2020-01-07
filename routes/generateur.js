@@ -3,7 +3,7 @@ var router = express.Router();
 var sqlite3 = require('sqlite3').verbose();
 
 router.get('/', function (req, res) {
-  var QUERY_STRING = "SELECT * FROM MARQUES;";
+  var QUERY_STRING = "SELECT * FROM MARKS;";
   var db = new sqlite3.Database('spellGenerator.db', (err) => {
     if (err) {
       return console.error(err.message);

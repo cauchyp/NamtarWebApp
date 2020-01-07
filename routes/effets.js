@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     console.log('Connected to the in-memory SQlite database.');
   });
 
-  db.all("SELECT * FROM MARQUES", function (err, rows) {
+  db.all("SELECT * FROM MARKS", function (err, rows) {
     res.render('effets', { effets: rows });
   });
 
