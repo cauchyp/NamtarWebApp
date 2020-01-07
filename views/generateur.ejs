@@ -6,30 +6,27 @@
 
 <body>
     <h3>Générateur de Competences</h3>
-    <p>Nom : </p><br>
-    <p><%=skill%> </p>
     <form method="POST" id="generateRandomSpell">
         <!--input type="text" placeholder="Set quote of the day" name="skill" /-->
         <input type="button" value="Generate" onclick="generateRandomSkill()">
     </form>
-    <tbody>
-        <script>var effect_list = [];</script>
-        <%effets_list.forEach(function(element) { %>
-        <script>
-            var row = { nom: "", effet: "", cout: "" };
-            row.nom = "<%= element.nom %>";
-            row.effet = "<%= element.effet %>";
-            row.cout = "<%= element.cout %>";
-            effect_list.push(row);
-        </script>
-        <% }); %>
-    </tbody>
+    <div id="skillTable"></div>
+    <script>var effect_list = [];</script>
+    <%effets_list.forEach(function(element) { %>
+    <script>
+        var row = { nom: "", effet: "", cout: "" };
+        row.nom = "<%= element.nom %>";
+        row.effet = "<%= element.effet %>";
+        row.cout = "<%= element.cout %>";
+        effect_list.push(row);
+    </script>
+    <% }); %>
 </body>
 
 <script>
 
     function generateRandomSkill() {
-        var skill = { name: "Random Skill", effects: "", cost: "0" };
+        var skill = { name: "Random Skill", outcomes: "" };
         console.log('generateRandomSkill() BEGIN');
 
         var max_distinct_effect = 3;
@@ -40,6 +37,8 @@
         };
 
         var max_effect_power = 5
+        skill.outcomes = new Array();
+
         distinct_effect_id_set.forEach((value) => {
             var outcome = { effect: "", power: "0", description: "", cost: "" };
             outcome.nom = effect_list[value].nom;
@@ -47,6 +46,25 @@
             outcome.description = effect_list[value].effet;
             outcome.cost = effect_list[value].cout;
             console.log(outcome);
+            skill.outcomes.push(outcome);
+        });
+
+        var h4 = document.createElement("H4");
+        h4.innerHTML = skill.name;
+        document.getElementById("skillTable").appendChild(h4);
+
+        skill.outcomes.forEach((values) => {
+            var pCost = document.createElement("P");
+            var pPower = document.createElement("P");
+            var pDesc = document.createElement("P");
+
+            pCost.innerHTML = "Coût : " + values.cost;
+            pPower.innerHTML = "Puissance : " + values.power;
+            pDesc.innerHTML = values.description;
+
+            document.getElementById("skillTable").appendChild(pDesc);
+            document.getElementById("skillTable").appendChild(pPower);
+            document.getElementById("skillTable").appendChild(pCost);
         });
 
         console.log('generateRandomSkill() END');
