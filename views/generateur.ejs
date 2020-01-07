@@ -10,6 +10,46 @@
     <p><%=skill%> </p>
     <form method="POST" id="generateRandomSpell">
         <!--input type="text" placeholder="Set quote of the day" name="skill" /-->
-        <input type="submit" value="Generate">
+        <input type="button" value="Generate" onclick="generateRandomSkill()">
     </form>
+    <tbody>
+        <script>var effect_list = [];</script>
+        <%effets_list.forEach(function(element) { %>
+        <script>
+            var row = { nom: "", effet: "", cout: "" };
+            row.nom = "<%= element.nom %>";
+            row.effet = "<%= element.effet %>";
+            row.cout = "<%= element.cout %>";
+            effect_list.push(row);
+        </script>
+        <% }); %>
+    </tbody>
 </body>
+
+<script>
+
+    function generateRandomSkill() {
+        var skill = { name: "Random Skill", effects: "", cost: "0" };
+        console.log('generateRandomSkill() BEGIN');
+
+        var max_distinct_effect = 3;
+        var distinct_effect_id_set = new Set();
+        while (distinct_effect_id_set.size < max_distinct_effect) {
+            var effect_id = Math.floor(Math.random() * (effect_list.length - 1)) + 1;
+            distinct_effect_id_set.add(effect_id);
+        };
+
+        var max_effect_power = 5
+        distinct_effect_id_set.forEach((value) => {
+            var outcome = { effect: "", power: "0", description: "", cost: "" };
+            outcome.nom = effect_list[value].nom;
+            outcome.power = Math.floor(Math.random() * (max_effect_power - 1)) + 1;
+            outcome.description = effect_list[value].effet;
+            outcome.cost = effect_list[value].cout;
+            console.log(outcome);
+        });
+
+        console.log('generateRandomSkill() END');
+        return ['a', 'b', 'c', 'd'];
+    };
+</script>
