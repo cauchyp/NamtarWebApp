@@ -66,10 +66,10 @@
           <tbody>
             <% 
             aptitudeList.forEach(function(element) {
-              if(element.categorie=='combat') {%>
+              if(element.type=='combat') {%>
             <tr>
-              <td><%= element.nom %></td>
-              <td><%= element.caracteristique %></td>
+              <td><%= element.name %></td>
+              <td><%= element.characteristic %></td>
               <td>0</td>
             </tr>
             <% }
@@ -86,10 +86,10 @@
           </thead>
           <tbody>
             <% aptitudeList.forEach(function(element) {
-                if(element.categorie=='utilitaire') {%>
+                if(element.type=='utilitaire') {%>
             <tr>
-              <td><%= element.nom %></td>
-              <td><%= element.caracteristique %></td>
+              <td><%= element.name %></td>
+              <td><%= element.characteristic %></td>
               <td>0</td>
             </tr>
             <% }
@@ -106,10 +106,10 @@
           </thead>
           <tbody>
             <% aptitudeList.forEach(function(element) {
-                if(element.categorie=='sociale') {%>
+                if(element.type=='sociale') {%>
             <tr>
-              <td><%= element.nom %></td>
-              <td><%= element.caracteristique %></td>
+              <td><%= element.name %></td>
+              <td><%= element.characteristic %></td>
               <td>0</td>
             </tr>
             <% }
