@@ -1,29 +1,37 @@
 <!--HEAD -->
-<%- include('header'); -%>
+<%- include('head'); -%>
 
 <!-- BODY -->
 <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 
 <body class="code-snippets-visible">
 
-  <h3>Générateur de Compétences</h3>
+  <div class="container">
+    <%- include('header'); -%>
+    <%- include('navbar'); -%>
 
-  <table class="u-full-width">
-    <thead>
-      <tr>
-        <th>Nom</th>
-        <th>Effets</th>
-        <th>Coût en Energie</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% effets.forEach(function(element) { %>
-      <tr>
-        <td><%= element.name %></td>
-        <td><%= element.description %></td>
-        <td><%= element.cost %></td>
-      </tr>
-      <% }); %>
-    </tbody>
+    <div class="docs-section">
 
+      <h1 class="docs-header">Tables des effets</h1>
+
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Effets</th>
+            <th>Coût en Energie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% effets.forEach(function(element) { %>
+          <tr>
+            <td><%= element.name %></td>
+            <td><%= element.description %></td>
+            <td><%= element.cost %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
